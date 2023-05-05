@@ -39,7 +39,7 @@ Type = st.selectbox('Type',["A","B","C"])
 
 Size = st.number_input("Size" )
 
-if st.button("Predict Sales Amount"): 
+if st.button("Predict Demand"): 
     query = pd.DataFrame({"Store":store,'Dept':Dept,'Date':Date,'IsHoliday':IsHoliday,'Type':Type,'Size':Size}, index=[0]) 
     st.title(pipe.predict(query))
     
